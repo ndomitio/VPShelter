@@ -25,16 +25,20 @@ namespace VPShelter
 
             List<VolunteerEmployee> EmployeeList = new List<VolunteerEmployee>();
             List<OtherPets> PetList = new List<OtherPets>();
+            List <Manager> ManagerList = new List<Manager>();
+            List<VirtualPet> DragonList = new List<VirtualPet>();
 
             EmployeeList.Add(Vol1);
             EmployeeList.Add(Vol2);
             EmployeeList.Add(Vol3);
 
-            //PetList.Add(Mydragon);
             PetList.Add(myCat);
             PetList.Add(myDog);
             PetList.Add(cat2);
             PetList.Add(dog2);
+
+            ManagerList.Add(Manager1);
+            DragonList.Add(myDragon);
 
             //allows changes resulting from method in manager/volunteer class to affect the Petlist that is present in the program class
             Manager1.PetList = PetList;
@@ -45,7 +49,7 @@ namespace VPShelter
             Vol1.Dog2 = dog2;
 
             int visitorSelect;
-            int volunteerSelect = 0;
+            int volunteerSelect;
             int firstChoice = Manager1.ManagerGreet();
             switch (firstChoice)
             {

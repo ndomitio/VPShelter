@@ -30,6 +30,7 @@ namespace VPShelter
         }
 
         //methods 
+        
         public int hostVisitor()
         {
             Console.WriteLine("What would you like to do?");
@@ -86,7 +87,7 @@ namespace VPShelter
             }
         }
 
-        public void Adopt()
+        public override void Adopt()
         //console writeline the list and ask for user input to select and remove from list?
         {
             Console.WriteLine("Here are the animals that we have at our shelter to adopt");

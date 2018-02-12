@@ -33,6 +33,10 @@ namespace VPShelter
 
         public abstract void PlayWithAnimals();
 
+        public virtual void Adopt()
+        { }
+        
+
 
     }
 

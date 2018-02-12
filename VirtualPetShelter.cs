@@ -12,7 +12,8 @@ namespace VPShelter
         //properties
         public List<OtherPets> PetList { get; set; }
         public List<VolunteerEmployee> EmployeeList { get; set; }
-
+        public List<Manager> ManagerList { get; set; }
+        public List<VirtualPet> DragonList { get; set; }
         //constructors
         public VirtualPetShelter()
         {
