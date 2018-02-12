@@ -64,11 +64,13 @@ namespace VPShelter
 
         public int VolunteerOptions()
         {
+            
             Console.WriteLine("\nEnter 1: to see how everyone is doing today");
             Console.WriteLine("Enter 2: to play with the animals");
             Console.WriteLine("Enter 3: to feed the animals");
             Console.WriteLine("Enter 4: to give the animals fresh water");
-            Console.WriteLine("Enter 5 to go home");
+            Console.WriteLine("Enter 5: to go back");
+            Console.WriteLine("Enter 6: to go home" );
             int volunteerSelect1 = int.Parse(Console.ReadLine());
             return volunteerSelect1;
         }

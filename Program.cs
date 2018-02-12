@@ -25,17 +25,12 @@ namespace VPShelter
 
             List<VolunteerEmployee> EmployeeList = new List<VolunteerEmployee>();
             List<OtherPets> PetList = new List<OtherPets>();
-            List <Manager> ManagerList = new List<Manager>();
+            List<Manager> ManagerList = new List<Manager>();
             List<VirtualPet> DragonList = new List<VirtualPet>();
 
-            EmployeeList.Add(Vol1);
-            EmployeeList.Add(Vol2);
-            EmployeeList.Add(Vol3);
+            EmployeeList.Add(Vol1); EmployeeList.Add(Vol2); EmployeeList.Add(Vol3);
 
-            PetList.Add(myCat);
-            PetList.Add(myDog);
-            PetList.Add(cat2);
-            PetList.Add(dog2);
+            PetList.Add(myCat); PetList.Add(myDog); PetList.Add(dog2); PetList.Add(cat2);
 
             ManagerList.Add(Manager1);
             DragonList.Add(myDragon);
@@ -43,75 +38,85 @@ namespace VPShelter
             //allows changes resulting from method in manager/volunteer class to affect the Petlist that is present in the program class
             Manager1.PetList = PetList;
 
-            Vol1.MyCat = myCat;
-            Vol1.MyDog = myDog;
-            Vol1.Cat2 = cat2;
-            Vol1.Dog2 = dog2;
+            Vol1.MyCat = myCat; Vol1.MyDog = myDog; Vol1.Cat2 = cat2; Vol1.Dog2 = dog2;
 
             int visitorSelect;
             int volunteerSelect;
-            int firstChoice = Manager1.ManagerGreet();
-            switch (firstChoice)
+            int firstChoice;
+
+            do
             {
-                case 1:
-                    do
-                    {
-                        volunteerSelect = Vol1.VolunteerOptions();
-                        if (volunteerSelect == 1)
+                firstChoice = Manager1.ManagerGreet();
+
+                switch (firstChoice)
+                {
+                    case 1:
+
+                        do
                         {
-                            Console.Clear();
-                            Vol1.AnimalStatus();
-                        }
-                        if (volunteerSelect == 2)
-                        {
-                            Console.Clear();
-                            Vol1.PlayWithAnimals();
-                        }
-                        if (volunteerSelect == 3)
-                        {
-                            Console.Clear();
-                            Vol1.Feed();
-                        }
-                        if (volunteerSelect == 4)
-                        {
-                            Console.Clear();
-                            Vol1.GiveWater();
-                        }
-                        if (volunteerSelect == 5)
-                        {
-                            System.Environment.Exit(0);
-                        }
+                            volunteerSelect = Vol1.VolunteerOptions();
+                            if (volunteerSelect == 1)
+                            {
+                                Console.Clear();
+                                Vol1.AnimalStatus();
+                            }
+                            if (volunteerSelect == 2)
+                            {
+                                Console.Clear();
+                                Vol1.PlayWithAnimals();
+                            }
+                            if (volunteerSelect == 3)
+                            {
+                                Console.Clear();
+                                Vol1.Feed();
+                            }
+                            if (volunteerSelect == 4)
+                            {
+                                Console.Clear();
+                                Vol1.GiveWater();
+                            }
+                            if (volunteerSelect == 6)
+                            {
+                                System.Environment.Exit(0);
+                            }
 
 
-                    } while (volunteerSelect != 5);
+                        } while (volunteerSelect != 5);
 
+                        break;
 
+                    case 2:
 
-
-                    break;
-                case 2:
-                    do
-                    {
-                        visitorSelect = Manager1.hostVisitor();
-
-                        if (visitorSelect == 1)
+                        do
                         {
-                            Console.Clear();
-                            Manager1.Adopt();
-                        }
-                        if (visitorSelect == 2)
-                        {
-                            Console.Clear();
-                            Manager1.PlayWithAnimals();
-                        }
-                        if (visitorSelect == 3)
-                        {
-                            Console.Clear();
-                            myDragon.Dragon();
-                        }
-                    } while (visitorSelect != 4);
-                    break;
-            }
+                            visitorSelect = Manager1.hostVisitor();
+
+                            if (visitorSelect == 1)
+                            {
+                                Console.Clear();
+                                Manager1.Adopt();
+                            }
+                            if (visitorSelect == 2)
+                            {
+                                Console.Clear();
+                                Manager1.PlayWithAnimals();
+                            }
+                            if (visitorSelect == 3)
+                            {
+                                Console.Clear();
+                                myDragon.Dragon();
+                            }
+                            if (visitorSelect == 5)
+                            {
+                                System.Environment.Exit(0);
+
+                            }
+
+                        } while (visitorSelect != 4);
+
+                        break;
+                }
+            } while (firstChoice != 3);
         }
     }
 }

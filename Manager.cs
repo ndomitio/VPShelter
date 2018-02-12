@@ -33,11 +33,13 @@ namespace VPShelter
         
         public int hostVisitor()
         {
+            
             Console.WriteLine("What would you like to do?");
             Console.WriteLine("Enter 1: to adopt");
             Console.WriteLine("Enter 2: to play with the animals");
             Console.WriteLine("Enter 3: to check out the dragon!");
-            Console.WriteLine("Enter 4: to leave");
+            Console.WriteLine("Enter 4: to go back");
+            Console.WriteLine("Enter 5: to go home");
             int visitorSelect1 = int.Parse(Console.ReadLine());
             return visitorSelect1;
 
@@ -45,8 +47,9 @@ namespace VPShelter
 
         public int ManagerGreet()
         {
+            Console.Clear();
             Console.WriteLine("Welcome to the animal shelter");
-            Console.WriteLine("\nIf you are here to volunteer press 1.\nIf you are here to visit press 2.");
+            Console.WriteLine("\nIf you are here to volunteer, press 1.\nIf you are here to visit, press 2.\nTo go home, press 3");
             int firstChoice1 = int.Parse(Console.ReadLine());
             return firstChoice1;
         }
