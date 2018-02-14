@@ -33,6 +33,7 @@ namespace VPShelter
             PetList.Add(myCat); PetList.Add(myDog); PetList.Add(dog2); PetList.Add(cat2);
 
             ManagerList.Add(Manager1);
+
             DragonList.Add(myDragon);
 
             //allows changes resulting from method in manager/volunteer class to affect the Petlist that is present in the program class
