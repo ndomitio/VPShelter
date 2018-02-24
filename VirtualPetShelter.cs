@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace VPShelter
 {
     public class VirtualPetShelter
@@ -24,4 +25,3 @@ namespace VPShelter
 
     }
 }
-
